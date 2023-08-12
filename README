@@ -1,0 +1,35 @@
+gogify - Dump available product versions from GOG.
+
+---------------------------------------------------
+
+gogify is a CLI-based query program to pull a list of product versions
+from GOG. The program provides several output formats for use in other
+projects.
+
+Note: You will need Python 3 to run this. Additional libraries are listed
+in the provided requirements.txt file and must be installed using
+
+    pip install -r requirements.txt
+
+gogify is licensed under BSD 3-Clause.
+All license information is available in the included COPYING file.
+
+
+usage: gogify.py [--help] [-h] [-o {csv,json,pipe,table,xml}] [-p {windows,linux,mac,all}] [-s] [-t sec] [-v] appname
+
+Dump available product versions from GOG.
+
+positional arguments:
+  appname               search terms for application name
+
+options:
+  --help                show this help message and exit
+  -h, --human-readable  show file sizes in human-readable format
+  -o {csv,json,pipe,table,xml}, --output {csv,json,pipe,table,xml}
+                        output format (default: table)
+  -p {windows,linux,mac,all}, --platform {windows,linux,mac,all}
+                        only show versions for a given platform
+  -s, --suppress        suppress errors if search returns no results
+  -t sec, --timeout sec
+                        number of seconds to wait for a connection before timeout (default: 10)
+  -v, --version         show program's version number and exit
